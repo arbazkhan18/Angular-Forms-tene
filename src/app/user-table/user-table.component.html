@@ -1,0 +1,27 @@
+<mat-card>
+
+    <mat-card-content>
+  
+      <mat-form-field id="input1">
+        <input [(ngModel)]="startingNumber" placeholder="From" matInput type="text" required #userInputNumber1>
+      </mat-form-field>
+  
+      <mat-form-field id="input2">
+        <input [(ngModel)]="endingNumber" placeholder="To" matInput type="text" required #userInputNumber2>
+      </mat-form-field>
+  
+    </mat-card-content>
+    <button mat-raised-button color="accent" (click)="onAdd()">Submit</button>
+  
+  
+    <p class="display-4	">The generated table from the given inputs </p>
+  
+    <table  cellspacing="2px">
+      <tr *ngFor = "let i of arr2">
+        <td *ngFor = "let j of arr1">
+            {{i * j}}
+        </td>
+      </tr>
+    </table>
+    
+  </mat-card>

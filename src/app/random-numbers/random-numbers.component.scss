@@ -1,0 +1,51 @@
+.example-container {
+  padding: 5rem;
+  width: 60%;
+  display:block;
+  margin: auto;
+  text-align: center;
+}
+
+mat-card-content{
+  padding:2rem;
+}
+
+mat-form-field{
+  width: 26%;
+}
+
+mat-chip{
+  width:20%;
+  font-weight: bold;
+}
+
+#headerOne{
+  //display: block;
+  float:left;
+}
+
+#headerTwo{
+ // display: block;
+  float:right;
+}
+
+
+#noSpace{
+  display: flex;
+ // flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  //flex: 1 1 auto;
+//  background-color: yellowgreen;
+}
+
+.inputOne{
+display: block;
+float:left;
+//display: flex;
+
+}
+
+.inputTwo{
+float: right;
+}

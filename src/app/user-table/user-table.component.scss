@@ -1,0 +1,29 @@
+mat-card{
+  width: 60%;  
+  margin: auto; 
+  text-align: center;
+}
+
+mat-card-content{
+  text-align: center;
+}
+
+#input1{
+  display: block;
+  float: left;
+  
+}
+#input2{
+  float: right;
+  margin-left: 10px;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1.5px solid black;
+  text-align: center;
+}

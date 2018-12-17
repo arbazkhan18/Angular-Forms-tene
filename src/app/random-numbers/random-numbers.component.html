@@ -1,0 +1,49 @@
+
+<div class="example-container">
+  <mat-card>
+    <mat-card-content id="firstInputBlock">
+      <div class="inputOne">
+          <label class="mat-title">From: </label>
+          <mat-form-field>
+              <input id="input1" [(ngModel)]="randomNumberLowerLimit" matInput type="number" required>
+            </mat-form-field>
+      </div>
+        
+  <div class="inputTwo">
+      <label class="mat-title" >To: </label>
+      <mat-form-field>
+        <input id="input2" [(ngModel)]="randomNumberUpperLimit" matInput type="number" required>
+      </mat-form-field>
+  </div>
+          
+    </mat-card-content>
+
+    <form (submit)="onSubmit(postForm)" #postForm="ngForm">
+
+      <mat-card-content >
+        <h4 id="headerOne" class="mat-body-strong" >Total Matched Count is : {{matchedCount}} </h4>
+        <h4 id="headerTwo" class="mat-body-strong" >Total Unmatched Count is: {{unmatchedCount}} </h4>
+      </mat-card-content>
+
+      <mat-card-content id="noSpace">
+
+        <mat-chip-list>
+          <mat-chip>{{numberOne}}</mat-chip>
+          <mat-chip>*</mat-chip>
+          <mat-chip>{{numberTwo}}</mat-chip>
+           <mat-chip>=</mat-chip> 
+        </mat-chip-list>
+      
+        <mat-form-field>
+          <input id="buttonId" matInput placeholder="Enter a valid number" 
+                                name="number" [(ngModel)]="userInput" type="number" #number="ngModel" required>
+          <mat-error *ngIf="number.invalid">enter only numbers 0 to 100</mat-error>
+        </mat-form-field>
+
+        <button  mat-raised-button color="primary" type="submit"> Submit </button>  
+      </mat-card-content>
+
+    </form>
+
+  </mat-card>
+</div>
